@@ -364,6 +364,8 @@ struct CachedSurface : SurfaceParams, std::enable_shared_from_this<CachedSurface
 
     bool is_custom = false;
     Core::CustomTexInfo custom_tex_info;
+    u32 last_width = 0;
+    u32 last_height = 0;
 
     static constexpr unsigned int GetGLBytesPerPixel(PixelFormat format) {
         // OpenGL needs 4 bpp alignment for D24 since using GL_UNSIGNED_INT as type
